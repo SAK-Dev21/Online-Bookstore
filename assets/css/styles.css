@@ -1,0 +1,255 @@
+* =========================
+   Main Style CSS
+   ========================= */
+
+/* Body and Global Styles */
+body {
+    font-family: 'Roboto', arial, verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================
+   Header Styles
+   ========================= */
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin-right: 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#cart-icon {
+    font-size: 1.5rem; /* Adjust size as needed */
+}
+
+/* =========================
+   Main Content Styles
+   ========================= */
+main {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-account, .login, .checkout, .product-details, .shopping-cart {
+    max-width: 600px;
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-account h2, .login h2, .checkout h2, .product-details h2, .shopping-cart h2 {
+    margin-top: 0;
+    font-size: 2rem; /* Set the font size for h2 tags */
+    text-align: center; /* Center the headlines */
+}
+
+/* Book List Section */
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.book-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 200px;
+}
+
+.book-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.book-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Product details section */
+
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.product-image {
+    max-width: 300px;
+    flex: 1;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    flex: 2;
+    max-width: 600px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.product-info p {
+    margin: 0.5rem 0;
+}
+
+/* Ensure strong tag is bold */
+.product-info p strong {
+    font-weight: bold;
+}
+
+
+.product-info button {
+    background-color: #343a40;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-info button:hover {
+    background-color: #495057;
+}
+
+
+/* =========================
+   Form Styles
+   ========================= */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form select {
+    width: auto;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* =========================
+   Button Styles
+   ========================= */
+button {
+    background-color: #343a40;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center; /* Center the button */
+}
+
+button:hover {
+    background-color: #495057;
+}
+
+/* =========================
+   Footer Styles
+   ========================= */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 1rem;
+    align-items: flex-start;
+}
+
+.footer-column h3 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+}
