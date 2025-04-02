@@ -24,39 +24,28 @@
     </header>
 
     <main>
-        <section class="shopping-cart">
-            <h2>Shopping Cart</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Total</th>
-                        <th>Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="assets/images/book1.jpg" alt="Book 1" class="thumbnail">
-                            <span>Book Title 1</span>
-                        </td>
-                        <td>1</td>
-                        <td>$19.99</td>
-                        <td>$19.99</td>
-                        <td><button class="remove-item">Remove</button></td>
-                    </tr>
-                    <!-- Repeat similar rows for other items in the cart -->
-                </tbody>
-            </table>
-            <div class="cart-total">
-                <p><strong>Total:</strong> $19.99</p>
-            </div>
-            <div class = "redirect-buttons">
-                <a href="../public/index.html" class="red-btn">Continue Shopping</a>
-                <a href="../public/checkout.html" class="green-btn">Proceed to Checkout</a>
-            </div>
+        <section class="payment">
+            <h2>Payment Information</h2>
+            <br>
+            <form class="payment-form">
+                <label for="card-name">Name on Card:</label>
+                <input type="text" id="card-name" name="card-name" required>
+                
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+                
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                
+                <div class = "redirect-buttons">
+                    <a href="checkout.html" class="red-btn">Back to Checkout</a>
+                    <a href="" class="green-btn">Pay Now</a>
+                    <!-- <button type="submit" class="pay-now-btn">Pay Now</button> -->
+                </div>
+            </form>
         </section>
     </main>
 
