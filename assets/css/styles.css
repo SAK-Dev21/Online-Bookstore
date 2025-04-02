@@ -1,10 +1,10 @@
-* =========================
+/* =========================
    Main Style CSS
    ========================= */
 
 /* Body and Global Styles */
 body {
-    font-family: 'Roboto', arial, verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
@@ -157,6 +157,99 @@ main {
     background-color: #495057;
 }
 
+/* Shopping cart */
+
+
+.shopping-cart {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the cart */
+}
+
+.shopping-cart h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Align the title to the left */
+}
+
+.shopping-cart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.shopping-cart th, .shopping-cart td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.shopping-cart th {
+    background-color: #f8f9fa;
+}
+
+.shopping-cart .thumbnail {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.shopping-cart .remove-item {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shopping-cart .remove-item:hover {
+    background-color: #c82333;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.continue-shopping {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.continue-shopping:hover {
+    background-color: #0056b3;
+}
+
+.checkout-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+}
 
 /* =========================
    Form Styles
