@@ -54,7 +54,7 @@ main {
     align-items: center;
 }
 
-.create-account, .login, .checkout, .product-details, .shopping-cart {
+.create-account, .login, .checkout, .product-details, .shopping-cart, .order-confirmation {
     max-width: 600px;
     width: 100%;
     background-color: white;
@@ -64,13 +64,22 @@ main {
     
 }
 
-.create-account h2, .login h2, .checkout h2, .product-details h2, .shopping-cart h2, .payment h2 {
+.create-account h2, .login h2, .checkout h2, .product-details h2, .shopping-cart h2, .payment h2, .order-confirmation h2 {
     margin-top: 0;
+    margin-bottom: 1.5rem;
     font-size: 2rem; /* Set the font size for h2 tags */
     text-align: center; /* Center the headlines */
 }
 
+.order-details h3 {
+    margin-top: 0;
+    font-size: 1.5rem; /* Set the font size for h2 tags */
+    text-align: center; /* Center the headlines */
+    margin-bottom: 1rem;
+}
+
 /* Book List Section */
+
 .book-list {
     display: flex;
     flex-wrap: wrap;
@@ -136,10 +145,9 @@ main {
 }
 
 .product-info p {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
 }
 
-/* Ensure strong tag is bold */
 .product-info p strong {
     font-weight: bold;
 }
@@ -158,7 +166,7 @@ main {
     background-color: #495057;
 }
 
-/* Shopping cart */
+/* Shopping Cart Section */
 
 .shopping-cart {
     max-width: 800px;
@@ -199,7 +207,7 @@ main {
     vertical-align: middle;
 }
 
-.shopping-cart .remove-item {
+.remove-item {
     background-color: #dc3545;
     color: white;
     padding: 0.5rem 1rem;
@@ -208,7 +216,7 @@ main {
     cursor: pointer;
 }
 
-.shopping-cart .remove-item:hover {
+.remove-item:hover {
     background-color: #c82333;
 }
 
@@ -217,27 +225,6 @@ main {
     font-size: 1.25rem;
     margin-bottom: 1rem;
 }
-
-.cart-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.continue-shopping {
-    background-color: #007bff;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.continue-shopping:hover {
-    background-color: #0056b3;
-}
-
 
 /* Checkout section */
 
@@ -301,19 +288,189 @@ main {
     font-size: 1rem;
 }
 
-.pay-now-btn {
-    background-color: #28a745;
+/* Order confirmation section */
+
+.order-confirmation .order-summary, .order-confirmation .shipping-information {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.order-confirmation .order-details {
+    margin-bottom: 2rem;
+}
+
+.order-confirmation table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.order-confirmation th, .order-confirmation td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-confirmation th {
+    background-color: #f8f9fa;
+}
+
+/* Stock levels page */
+
+.stock-levels, .add-stock {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stock-levels h2, .add-stock h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Align the title to the left */
+}
+
+.stock-table, .admin-actions, .add-stock form {
+    margin-bottom: 2rem;
+}
+
+.stock-table h3, .add-stock h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.stock-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.stock-table th, .stock-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.stock-table th {
+    background-color: #f8f9fa;
+}
+
+/* Add stock section */
+
+.add-stock {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-stock h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Align the title to the left */
+}
+
+.file-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.file-input label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.file-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.file-box p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.file-box button {
+    background-color: #007bff;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
 }
 
-.pay-now-btn:hover {
-    background-color: #218838;
+.file-box button:hover {
+    background-color: #0056b3;
 }
+
+.file-input input[type="file"] {
+    display: none;
+}
+
+.add-stock form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-stock label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.add-stock input[type="text"], .add-stock input[type="date"], .add-stock textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-stock input[type="range"] {
+    width: 100%;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.slider-container label {
+    flex: 1;
+}
+
+slider-container input {
+    flex: 2;
+}
+
+slider-container output {
+    flex: 0;
+    margin-left: 1rem;
+    width: 50px;
+    text-align: center;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
 
 /* =========================
    Form Styles

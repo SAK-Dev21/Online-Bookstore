@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>Order Confirmation</title>
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
@@ -24,28 +24,45 @@
     </header>
 
     <main>
-        <section class="payment">
-            <h2>Payment Information</h2>
-            <br>
-            <form class="payment-form">
-                <label for="card-name">Name on Card:</label>
-                <input type="text" id="card-name" name="card-name" required>
-                
-                <label for="card-number">Card Number:</label>
-                <input type="text" id="card-number" name="card-number" required>
-                
-                <label for="expiry-date">Expiry Date:</label>
-                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
-                
-                <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" name="cvv" required>
-                
-                <div class = "redirect-buttons">
-                    <a href="checkout.html" class="red-btn">Back to Checkout</a>
-                    <a href="order_confirmation.html" class="green-btn">Pay Now</a>
-                    <!-- <button type="submit" class="pay-now-btn">Pay Now</button> -->
-                </div>
-            </form>
+        <section class="order-confirmation">
+            <h2>Thank You for Your Order!</h2>
+            <div class="order-summary">
+                <p>Order Number: <strong>123456</strong></p>
+                <p>Order Date: <strong>April 3, 2025</strong></p>
+                <p>We appreciate your business! Your order has been confirmed and will be shipped soon.</p>
+            </div>
+            <div class="order-details">
+                <h3>Order Details</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Book Title 1</td>
+                            <td>1</td>
+                            <td>£19.99</td>
+                            <td>£19.99</td>
+                        </tr>
+                        <!-- Repeat similar rows for other items in the order -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="shipping-information">
+                <h3>Shipping Information</h3>
+                <p>Name: John Doe</p>
+                <p>Address: 123 Main St, Springfield, IL 62704, UK</p>
+            </div>
+         
+            <div class = "redirect-buttons">
+                <a href="shop_all_books.html" class="green-btn">Continue Shopping</a>
+                <!-- <button type="submit" class="pay-now-btn">Pay Now</button> -->
+            </div>
         </section>
     </main>
 
