@@ -16,7 +16,7 @@ session_start();
     <header>
         <nav>
             <ul>
-                <li><a href="../public/index.php">Home</a></li>
+                <li><a href="../public/home.php">Home</a></li>
                 <li><a href="../public/shop_all_books.php">Shop All Books</a></li>
                 <li><a href="../authentication/account.php">Account</a></li>
                 <li><a href="../cart/shopping_cart.php" id="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
