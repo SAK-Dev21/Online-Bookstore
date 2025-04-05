@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>Create Account</title>
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="../admin/stock_levels.html">Admin Dashboard</a></li>
                 <li><a href="../public/index.html">Home</a></li>
                 <li><a href="../public/shop_all_books.html">Shop All Books</a></li>
                 <li><a href="../authentication/sign-in.html">Account</a></li>
@@ -24,27 +22,28 @@
     </header>
 
     <main>
-        <section class="payment">
-            <h2>Payment Information</h2>
-            <br>
-            <form class="payment-form">
-                <label for="card-name">Name on Card:</label>
-                <input type="text" id="card-name" name="card-name" required>
+        <section class="create-account">
+            <h2>Create Account</h2>
+            <form action="create_account.php" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
                 
-                <label for="card-number">Card Number:</label>
-                <input type="text" id="card-number" name="card-number" required>
-                
-                <label for="expiry-date">Expiry Date:</label>
-                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
-                
-                <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" name="cvv" required>
-                
-                <div class = "redirect-buttons">
-                    <a href="checkout.html" class="red-btn">Back to Checkout</a>
-                    <a href="order_confirmation.html" class="green-btn">Pay Now</a>
-                    <!-- <button type="submit" class="pay-now-btn">Pay Now</button> -->
-                </div>
+                <label for="role">Role</label>
+                <select name="role" id="role">
+                    <option>Customer</option>
+                    <option>Admin</option>
+                </select>
+
+                <label for="admin-code">Enter Admin Code (Optional)</label>
+                <input type="text" id="admin-code" name="admin-code" required>
+
+                <button type="submit">Create Account</button>
             </form>
         </section>
     </main>

@@ -13,8 +13,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="stock_levels.html">Admin Dashboard</a></li>
-                <li><a href="../public/index.html">Home</a></li>
+                <li><a href="../public/index.php">Home</a></li>
                 <li><a href="../public/shop_all_books.html">Shop All Books</a></li>
                 <li><a href="../authentication/sign-in.html">Account</a></li>
                 <li><a href="../cart/shopping_cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>

@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="../admin/stock_levels.html">Admin Dashboard</a></li>
                 <li><a href="../public/index.html">Home</a></li>
                 <li><a href="../public/shop_all_books.html">Shop All Books</a></li>
                 <li><a href="../authentication/sign-in.html">Account</a></li>
@@ -25,13 +23,13 @@
 
     <main>
         <section class="book-list">
-            <h2>All Books</h2>
+            <h2>Books in Stock</h2>
             <div class="book-item">
                 <img src="" alt="Book 1">
                 <h3>Book Title 1</h3>
                 <button>Add to Cart</button>
             </div>
-            <!-- Repeat similar blocks for other books in various genres -->
+            <!-- Repeat similar blocks for other books -->
         </section>
     </main>
 
