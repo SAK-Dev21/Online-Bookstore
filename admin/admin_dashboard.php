@@ -4,7 +4,7 @@ $page_title = 'Admin Dashboard';
 include '../includes/header.inc.php';
 
 if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'admin') {
-    header('Location: login.php');
+    header('Location: ../authentication/login.php');
     exit();
 }
 
@@ -21,7 +21,7 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <section class="admin-dashboard">
         <h2>Inventory</h2>
         <div class="add-stock-container">
-            <a href="add-book.php" class="button">Add New Book</a>
+            <a href="add_book.php" class="button">Add Stock</a>
         </div>
         <table>
             <thead>
@@ -32,8 +32,8 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <th>Quantity Available</th>
                     <th>Author</th>
                     <th>Publication Date</th>
-                    <th>Trade Price</th>
-                    <th>Retail Price</th>
+                    <th>Trade Price (£)</th>
+                    <th>Retail Price (£)</th>
                     <th>Description</th>
                     <th>Actions</th>
                 </tr>
@@ -41,7 +41,7 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <tbody>
                 <?php foreach ($books as $book): ?>
                     <tr>
-                        <td><img src="<?php echo htmlspecialchars($book['thumbnail']); ?>" alt="<?php echo htmlspecialchars($book['title']); ?>" width="50"></td>
+                        <td><img src="<?php echo htmlspecialchars($book['thumbnail']); ?>" alt="<?php echo htmlspecialchars($book['title']); ?>" width="50" onerror="this.onerror=null; this.src='../assets/images/default_thumbnail.jpg';"></td>
                         <td><?php echo htmlspecialchars($book['title']); ?></td>
                         <td><?php echo htmlspecialchars($book['isbn_13']); ?></td>
                         <td><?php echo htmlspecialchars($book['quantity']); ?></td>
@@ -51,8 +51,7 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <td><?php echo htmlspecialchars($book['retail_price']); ?></td>
                         <td><?php echo htmlspecialchars($book['description']); ?></td>
                         <td>
-                            <!-- <button onclick="openEditForm(<?php echo htmlspecialchars($book['id']); ?>)" class="button">Manage</button> -->
-                            <button >Manage</button>
+                            <a href="edit_book.php?isbn_13=<?php echo htmlspecialchars($book['isbn_13']); ?>" class="button">Manage</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -60,11 +59,5 @@ $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </table>
     </section>
 </main>
-
-<script>
-function openEditForm(id) {
-    window.location.href = 'edit-book.php?id=' + id;
-}
-</script>
 
 <?php include '../includes/footer.inc.php'; ?>

@@ -400,7 +400,7 @@ main {
 
 /* Add book section */
 
-.add-stock {
+.add-book {
     max-width: 800px;
     width: 100%;
     background-color: white;
@@ -409,7 +409,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.add-stock h2 {
+.add-book h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: left; /* Align the title to the left */
@@ -461,17 +461,17 @@ main {
     display: none;
 }
 
-.add-stock form {
+.add-book form {
     display: flex;
     flex-direction: column;
 }
 
-.add-stock label {
+.add-book label {
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
 
-.add-stock input[type="text"], .add-stock input[type="date"], .add-stock textarea {
+.add-book input[type="text"], .add-book input[type="date"], .add-book textarea {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -479,7 +479,7 @@ main {
     border-radius: 5px;
 }
 
-.add-stock input[type="range"] {
+.add-book input[type="range"] {
     width: 100%;
 }
 
@@ -493,11 +493,11 @@ main {
     flex: 1;
 }
 
-slider-container input {
+.slider-container input {
     flex: 2;
 }
 
-slider-container output {
+.slider-container output {
     flex: 0;
     margin-left: 1rem;
     width: 50px;
