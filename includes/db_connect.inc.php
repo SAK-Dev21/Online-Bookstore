@@ -1,7 +1,7 @@
 <?php
 
 $host = 'localhost';
-$dbname = 'your_database_name'; // Replace with your database name
+$dbname = 'bookstore'; // Replace with your database name
 $dbusername = 'root'; // Replace with your MySQL username
 $dbpassword = ''; // Replace with your MySQL password
 

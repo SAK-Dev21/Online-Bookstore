@@ -54,6 +54,17 @@ main {
     align-items: center;
 }
 
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.update-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 .create-account, .login, .checkout, .product-details, .shopping-cart, .order-confirmation {
     max-width: 600px;
     width: 100%;
@@ -64,15 +75,15 @@ main {
     
 }
 
-.create-account h2, .login h2, .checkout h2, .product-details h2, .shopping-cart h2, .payment h2, .order-confirmation h2 {
+.create-account h2, .login h2, .checkout h2, .product-details h2, .shopping-cart h2, .payment h2, .order-confirmation h2, .account-details h2 {
     margin-top: 0;
     margin-bottom: 1.5rem;
     font-size: 2rem; /* Set the font size for h2 tags */
     text-align: center; /* Center the headlines */
 }
 
-.order-details h3 {
-    margin-top: 0;
+.order-details h3, .account-details h3 {
+    margin-top: 10px;
     font-size: 1.5rem; /* Set the font size for h2 tags */
     text-align: center; /* Center the headlines */
     margin-bottom: 1rem;
@@ -471,6 +482,64 @@ slider-container output {
     margin-top: 1rem;
 }
 
+/* Account details */
+
+.account-details {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+.account-details label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.account-details input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit, .log-out {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.log-out {
+    background-color:#dc3545;
+}
+
+
+.submit:hover{
+    background-color: #218838;
+}
+
+.log-out:hover {
+    background-color: #c82333;
+}
+
+.update-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
 /* =========================
    Form Styles
