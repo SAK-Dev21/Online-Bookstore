@@ -75,7 +75,7 @@ main {
     
 }
 
-.create-account h2, .login h2, .checkout h2, .product-details h2, .shopping-cart h2, .payment h2, .order-confirmation h2, .account-details h2, .admin-dashboard h2 {
+.create-account h2, .login h2, .checkout h2, .product-details h2, .shopping-cart h2, .payment h2, .order-confirmation h2, .account-details h2, .admin-dashboard h2, .book-list h2 {
     margin-top: 0;
     margin-bottom: 1.5rem;
     font-size: 2rem; /* Set the font size for h2 tags */
@@ -91,20 +91,19 @@ main {
 
 /* Book List Section */
 
-.book-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
-
 .book-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: white;
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 200px;
+    width: 200px;
+    margin: 0 10px;
+    position: relative; /* Added for positioning */
 }
 
 .book-item img {
@@ -114,11 +113,40 @@ main {
 }
 
 .book-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 0.9rem; /* Smaller text size */
+    margin-bottom: 0.5rem;
+}
+
+.book-item .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 1rem; /* Positioning at the bottom */
+    width: 100%;
+}
+
+.book-item button {
+    background-color: #343a40;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-item button:hover {
+    background-color: #495057;
 }
 
 /* Product details section */
+
+.product-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
 
 .product-details {
     display: flex;
@@ -126,6 +154,8 @@ main {
     gap: 2rem;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .product-image {
@@ -149,10 +179,9 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.product-info h2 {
+.product-info h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    text-align: left;
 }
 
 .product-info p {
@@ -163,18 +192,86 @@ main {
     font-weight: bold;
 }
 
+.book-format {
+    margin: 1rem 0;
+}
 
-.product-info button {
+.book-format label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.book-format select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.quantity button {
     background-color: #343a40;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.product-info button:hover {
+.quantity button:hover {
     background-color: #495057;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+    margin: 0 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.additional-info {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.additional-info details {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+.additional-info summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.additional-info p {
+    margin: 1rem 0;
 }
 
 /* Shopping Cart Section */
