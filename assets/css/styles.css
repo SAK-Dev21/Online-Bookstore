@@ -65,7 +65,7 @@ main {
     margin-top: 10px;
 }
 
-.create-account, .login, .checkout, .product-details, .shopping-cart, .order-confirmation {
+.create-account, .login, .checkout, .product-details, .shopping-cart, .order-confirmation, .account-details {
     max-width: 600px;
     width: 100%;
     background-color: white;
@@ -75,14 +75,14 @@ main {
     
 }
 
-.create-account h2, .login h2, .checkout h2, .product-details h2, .shopping-cart h2, .payment h2, .order-confirmation h2, .account-details h2 {
+.create-account h2, .login h2, .checkout h2, .product-details h2, .shopping-cart h2, .payment h2, .order-confirmation h2, .account-details h2, .admin-dashboard h2 {
     margin-top: 0;
     margin-bottom: 1.5rem;
     font-size: 2rem; /* Set the font size for h2 tags */
     text-align: center; /* Center the headlines */
 }
 
-.order-details h3, .account-details h3 {
+.order-details h3, .account-details h3, .admin-dashboard h3 {
     margin-top: 10px;
     font-size: 1.5rem; /* Set the font size for h2 tags */
     text-align: center; /* Center the headlines */
@@ -328,49 +328,77 @@ main {
     background-color: #f8f9fa;
 }
 
-/* Stock levels page */
+/* Admin Dashboard page */
 
-.stock-levels, .add-stock {
-    max-width: 800px;
+.admin-dashboard {
     width: 100%;
+    max-width: 1000px;
     background-color: white;
     padding: 2rem;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.stock-levels h2, .add-stock h2 {
-    font-size: 2rem;
+.admin-dashboard h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.add-stock-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: 1rem;
-    text-align: left; /* Align the title to the left */
 }
 
-.stock-table, .admin-actions, .add-stock form {
-    margin-bottom: 2rem;
+.admin-dashboard .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
-.stock-table h3, .add-stock h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.admin-dashboard .button:hover {
+    background-color: #0056b3;
 }
 
-.stock-table table {
+.admin-dashboard table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
-.stock-table th, .stock-table td {
+.admin-dashboard table th, .admin-dashboard table td {
     padding: 0.75rem;
+    border: 1px solid #ccc;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
 }
 
-.stock-table th {
-    background-color: #f8f9fa;
+.admin-dashboard table th {
+    background-color: #f4f4f4;
 }
 
-/* Add stock section */
+.admin-dashboard table td {
+    align-items: center;
+}
+
+.admin-dashboard table td img {
+    width: 50px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+/* Add book section */
 
 .add-stock {
     max-width: 800px;
@@ -484,16 +512,6 @@ slider-container output {
 
 /* Account details */
 
-.account-details {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    width: 100%;
-    max-width: 400px;
-}
-
 .account-details label {
     display: block;
     margin-top: 1rem;
@@ -540,6 +558,7 @@ slider-container output {
     font-weight: bold;
     margin-top: 10px;
 }
+
 
 /* =========================
    Form Styles
