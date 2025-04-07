@@ -77,6 +77,56 @@ https://github.com/user-attachments/assets/fe26477e-f4b9-47fb-a742-eaa25344661c
 
 ---
 
+# Installation & Setup Instructions
+
+Follow the steps below to run this project locally or in Codio.
+
+## 1. Clone the Repository
+
+Clone this project using Git:
+
+```bash
+git clone https://github.com/your-username/Online-Bookstore.git
+cd Online-Bookstore
+```
+## 2. Requirements
+Ensure your environment includes:
+
+* PHP 7.4 or above
+* MySQL or MariaDB
+* Apache or an equivalent local web server (e.g. XAMPP, WAMP)
+* phpMyAdmin (optional but recommended)
+* Codio or Visual Studio Code (if using a code editor)
+* No external libraries or frameworks (e.g. Composer or npm) are required.
+
+## 3. Import the Database
+
+* Open phpMyAdmin (or your preferred database client).
+* Create a new database named bookstore.
+* Import the SQL file located at /database/bookstore_dump.sql. This will create the required books table and populate it with test data.
+
+## 4. Configure the Database Connection
+Open your database configuration file (usually located at /includes/db_connect.inc.php) and ensure the following values are correct for your environment:
+```
+PHP
+$host = 'localhost';
+$db   = 'bookstore';
+$user = 'root';
+$pass = ''; // Use your MySQL password here, if required
+```
+If using Codio, the database may need to be set up via terminal-based MySQL. If you cannot access phpMyAdmin, please consult your course’s Codio setup guide.
+
+## 5. Run the Website
+* If using XAMPP or WAMP:
+    *  Move the project folder to your server directory (e.g. htdocs for XAMPP).
+    * Start Apache and MySQL.
+    * Open your browser and go to http://localhost/Online-Bookstore/public/home.php.
+* If using Codio:
+    * Open the Box URL via Tools > Preview > Project Index (Box URL).
+    * Ensure your PHP files are in the public directory.
+    * Navigate to /public/home.php.
+    * Make sure all include paths and folder structures are preserved when copying to Codio.
+
 ## Known Issues / Constraints
 
 - PHPMyAdmin was not available on Codio. Development and database testing were conducted locally using XAMPP.
