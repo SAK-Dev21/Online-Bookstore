@@ -82,12 +82,12 @@ main {
     text-align: center; /* Center the headlines */
 }
 
-.order-details h3, .account-details h3, .admin-dashboard h3 {
+ .order-details h3, .account-details h3, .admin-dashboard h3 {
     margin-top: 10px;
-    font-size: 1.5rem; /* Set the font size for h2 tags */
-    text-align: center; /* Center the headlines */
+    font-size: 1.5rem; 
+    text-align: center; 
     margin-bottom: 1rem;
-}
+} 
 
 /* Book List Section */
 
@@ -367,7 +367,7 @@ main {
 
 /* Checkout section */
 
-.checkout {
+.checkout{
     max-width: 800px;
     width: 100%;
     background-color: white;
@@ -387,12 +387,12 @@ main {
     margin-bottom: 2rem;
 }
 
-.shipping-information h3, .shipping-method h3, .order-summary h3 {
+.shipping-information h3, .shipping-method h3, .order-summary h3, .total-cost h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.shipping-information label, .shipping-method label, .order-summary p {
+.shipping-information label, .shipping-method label, .order-summary p{
     display: block;
     margin-bottom: 0.5rem;
 }
@@ -408,11 +408,32 @@ main {
 
 /* Payment section */
 
+.payment {
+    max-width: 600px;
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the section */
+}
+
+.payment h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Center the title */
+}
+
+.payment-information h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Align the title to the left */
+}
+
 .payment-form {
     display: flex;
     flex-direction: column;
 }
-
 
 .payment-form label {
     font-size: 1rem;
@@ -427,34 +448,71 @@ main {
     font-size: 1rem;
 }
 
+.total-cost {
+    margin: 2rem 0;
+}
+
+.total-cost h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Align the title to the left */
+}
+
+.total-cost p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
 /* Order confirmation section */
 
-.order-confirmation .order-summary, .order-confirmation .shipping-information {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.order-confirmation {
+    max-width: 600px;
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the section */
+}
+
+.order-confirmation h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Center the title */
+}
+
+.order-details, .payment-details, .order-summary {
     margin-bottom: 2rem;
 }
 
-.order-confirmation .order-details {
-    margin-bottom: 2rem;
+.order-details h3, .payment-details h3, .order-summary h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Align the title to the left */
 }
 
-.order-confirmation table {
+.order-details p, .payment-details p, .order-summary p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.order-summary table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1rem;
 }
 
-.order-confirmation th, .order-confirmation td {
+.order-summary th, .order-summary td {
     padding: 0.75rem;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-.order-confirmation th {
+.order-summary th {
     background-color: #f8f9fa;
 }
+
 
 /* Admin Dashboard page */
 

@@ -23,7 +23,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <li><a href="../authentication/account.php">Account</a></li>
                 <li>
                     <a href="../cart/shopping_cart.php">
-                        Shopping Basket<span id="cart-summary">
+                        Shopping Basket <span id="cart-summary">
                             <?php
                             // You can make this dynamic later — for now, default to 0
                             // echo isset($_SESSION['cart']) ? count($_SESSION['cart']) . " items" : "0 items - £0.00";
