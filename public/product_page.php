@@ -2,7 +2,13 @@
 <?php
 require '../includes/db_connect.inc.php'; 
 
-$isbn_13 = $_GET['id'];
+// Get the isbn_13 parameter from the URL
+$isbn_13 = $_GET['isbn_13'];
+
+if (!$isbn_13) {
+    echo "Invalid ISBN.";
+    exit;
+}
 
 try {
     $stmt = $pdo->prepare("SELECT * FROM books WHERE isbn_13 = ?");
@@ -37,10 +43,10 @@ if (!$book) {
             </div>
             <div class="quantity">
                 <button class="decrease">-</button>
-                <input type="number" value="1" min="1" max="<?php echo htmlspecialchars($book['quantity']); ?>">
+                    <input type="number" data-id="<?php echo htmlspecialchars($book['isbn_13']); ?>" value="1" min="1" max="<?php echo htmlspecialchars($book['quantity']); ?>">
                 <button class="increase">+</button>
             </div>
-            <button class="add-to-cart" data-id="<?php echo htmlspecialchars($book['isbn_13']); ?>">Add to Cart</button>
+            <button class="button add-to-cart" data-id="<?php echo htmlspecialchars($book['isbn_13']); ?>">Add to Cart</button>
         </div>
     </section>
     <section class="additional-info">
@@ -63,5 +69,7 @@ if (!$book) {
     </section>
 </main>
 
+<script src="../assets/js/cart.js"></script> 
 <script src="../assets/js/scripts.js"></script> 
+
 <?php include '../includes/footer.inc.php'; ?>

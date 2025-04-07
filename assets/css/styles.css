@@ -121,8 +121,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    position: absolute;
-    bottom: 1rem; /* Positioning at the bottom */
     width: 100%;
 }
 
@@ -236,19 +234,14 @@ main {
     border-radius: 5px;
 }
 
-.add-to-cart {
-    background-color: #007bff;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
+.view-details{
+    margin-bottom: 10px;
 }
 
-.add-to-cart:hover {
-    background-color: #0056b3;
+.add-to-cart {
+    
 }
+
 
 .additional-info {
     margin-top: 2rem;
@@ -276,62 +269,100 @@ main {
 
 /* Shopping Cart Section */
 
+/* Styles for the shopping cart */
 .shopping-cart {
-    max-width: 800px;
     width: 100%;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Center the cart */
-}
-
-.shopping-cart h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: left; /* Align the title to the left */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .shopping-cart table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 1rem;
 }
 
 .shopping-cart th, .shopping-cart td {
-    padding: 0.75rem;
+    padding: 10px;
+    border: 1px solid #ddd;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
 .shopping-cart th {
-    background-color: #f8f9fa;
+    background-color: #f4f4f4;
 }
 
-.shopping-cart .thumbnail {
-    width: 50px;
+.shopping-cart img {
+    width: 100px;
     height: auto;
-    margin-right: 10px;
-    vertical-align: middle;
 }
 
-.remove-item {
-    background-color: #dc3545;
+.shopping-cart .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.shopping-cart .quantity button {
+    background-color: #343a40;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.shopping-cart .quantity input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.shopping-cart .delete-from-cart {
+    background-color: red;
+    color: white;
+    padding: 0.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.remove-item:hover {
-    background-color: #c82333;
+.shopping-cart .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
 }
 
-.cart-total {
-    text-align: right;
-    font-size: 1.25rem;
+.shopping-cart .button:hover {
+    background-color: #f4f4f4;
+}
+
+#empty-cart {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#empty-cart:hover {
+    background-color: darkred;
+}
+
+.readjust {
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: 1rem;
+}
+
+.readjust h3 {
+    font-size: 1.5rem;;
 }
 
 /* Checkout section */
@@ -468,28 +499,26 @@ main {
     background-color: #0056b3;
 }
 
-.admin-dashboard table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
+/* =========================
+   Table Styles
+   ========================= */
 
-.admin-dashboard table th, .admin-dashboard table td {
+table th, table td {
     padding: 0.75rem;
     border: 1px solid #ccc;
     text-align: left;
     vertical-align: middle;
 }
 
-.admin-dashboard table th {
+table th {
     background-color: #f4f4f4;
 }
 
-.admin-dashboard table td {
+table td {
     align-items: center;
 }
 
-.admin-dashboard table td img {
+table td img {
     width: 50px;
     height: auto;
     margin-right: 1rem;
